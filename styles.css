@@ -51,7 +51,7 @@ h3{
 .show-button, .play-game{
   flex-basis: 60%;
   text-align: center;
-  background-color: rgb(122, 157, 255);
+  background-color: rgb(23, 113, 50);
   border-radius: 8px;
   height: 10rem;
 }
@@ -70,7 +70,7 @@ h3{
   padding: 2rem;
 }
 
-.hangman-word {
+.flex-container {
   display: flex;
   justify-content: space-between;
 }
@@ -167,19 +167,19 @@ h3{
     transform: translate(20%, -50%) rotate(45deg);
 }
 
-.lettersContainer {
+.letters-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .letter {
-  display: inline-block;
-  padding: 1rem;
+  padding: 1.5rem;
   font-size: 1rem;
-  width: fit-content;
   background-color: black;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .underlineLetter {
