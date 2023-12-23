@@ -9,7 +9,8 @@ export const elements = {
   totalClicks: document.getElementById("total-clicks"),
   userScores: document.getElementById("user-scores"),
   lettersContainer: document.querySelector('.letters-container'),
-  wordContainer: document.querySelector('.word')
+  wordContainer: document.querySelector('.word'),
+  hangman: document.querySelector('.hangman')
 };
 
 

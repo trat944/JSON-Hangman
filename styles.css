@@ -174,7 +174,7 @@ h3{
 }
 
 .letter {
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 1rem;
   background-color: black;
   color: white;
@@ -199,5 +199,14 @@ h3{
 }
 
 .hidden {
+  visibility: hidden;
+}
+
+.ones {
+  color: red;
+  background-color: red;
+}
+
+.hide-1, .hide-2, .hide-3, .hide-4, .hide-5, .hide-6, .hide-7, .hide-8, .hide-9 {
   visibility: hidden;
 }
