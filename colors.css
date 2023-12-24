@@ -1,0 +1,10 @@
+:root {
+    --primary: #7209b7;
+    --accent: #f20089;
+
+    --background: #e0aaff;
+    --backgroundsoft: rgba(224, 170, 255, 0.5);
+
+    --black:#0b090a;
+    --white: #fdfffc;
+}

@@ -1,0 +1,298 @@
+* {
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+html {
+    background-color: var(--backgroundsoft);
+    opacity: 0.5;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 1rem 0;
+    gap: 4rem;
+}
+
+h1 {
+    font-family: 'Rubik Doodle Shadow';
+    text-align: center;
+    font-size: 5rem;
+}
+
+h2 {
+    font-family: 'Rubik Bubbles';
+    text-align: center;
+    font-size: 3rem;
+
+    margin-bottom: 2rem;
+}
+
+small {
+    position: absolute;
+    color: var(--accent);
+
+    font-size: 1.5rem;
+    left: 0.6rem;
+    bottom: -2rem;
+}
+
+/* LOGIN SECTION */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    min-height: 70vh;
+
+    /* position: relative; */
+
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+    background-color: var(--background);
+}
+
+.input_group {
+    position: relative;
+}
+
+.input {
+    all: unset;
+    border: 0.3rem solid var(--white);
+    border-radius: 8px;
+    padding: 0.9rem 0.4rem 0.4rem 0.4rem;
+    transition: 150ms
+        cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus {
+    border: 0.3rem solid var(--primary);
+}
+
+.input:is(:focus, :valid) ~ label {
+    transform: translateY(-100%) scale(0.7);
+    background-color: var(--background);
+    padding-inline: 0.3rem;
+    color: var(--primary);
+}
+
+.label{
+    position: absolute;
+    top: 1.3rem;
+    left: 0.6rem;
+    color: var(--white);
+    pointer-events: none;
+    transition: 150ms
+        cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn {
+    margin-top: 2rem;
+    width: 15%;
+    border-radius: 10px;
+}
+
+/* GAME SECTION */
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    min-height: 70vh;
+
+    position: relative;
+
+    gap: 1rem;
+    padding: 1.5rem 2.5rem;
+    background-color: var(--background);
+}
+
+.dashboard {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+}
+
+.hangman {
+    position: relative;
+
+    width: 20rem;
+    height: 30rem;
+}
+
+.base_bar{
+    position: absolute;
+    width: 100%;
+    height: 1rem;
+    bottom: 0;
+    background-color: var(--primary);
+}
+
+.vertical_bar {
+    position: absolute;
+    width: 1rem;
+    height: 90%;
+    left: 2rem;
+    bottom: 1rem;
+    background-color: var(--primary);
+}
+
+.horizontal_bar {
+    position: absolute;
+    width: 14rem;
+    height: 1rem;
+    left: 2rem;
+    top: 1rem;
+    background-color: var(--primary);
+}
+
+.top_bar {
+    position: absolute;
+    width: 1rem;
+    height: 2.5rem;
+    left: 15rem;
+    top: 2rem;
+    background-color: var(--primary);
+}
+
+.man_head {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    left: 13.6rem;
+    top: 4rem;
+    background-color: var(--primary);
+}
+
+.man_body {
+    position: absolute;
+    width: 0.8rem;
+    height: 9rem;
+    left: 15.2rem;
+    top: 7rem;
+    background-color: var(--primary);
+}
+
+.man_right_arm {
+    position: absolute;
+    width: 0.5rem;
+    height: 4rem;
+    left: 14rem;
+    top: 9rem;
+    transform: rotate(35deg);
+    background-color: var(--primary);
+}
+
+.man_left_arm {
+    position: absolute;
+    width: 0.5rem;
+    height: 4rem;
+    left: 16.7rem;
+    top: 9rem;
+    transform: rotate(-35deg);
+    background-color: var(--primary);
+}
+
+.man_right_leg {
+    position: absolute;
+    width: 0.5rem;
+    height: 4rem;
+    left: 14rem;
+    top: 15.5rem;
+    transform: rotate(35deg);
+    background-color: var(--primary);
+}
+
+.man_left_leg {
+    position: absolute;
+    width: 0.5rem;
+    height: 4rem;
+    left: 16.7rem;
+    top: 15.5rem;
+    transform: rotate(-35deg);
+    background-color: var(--primary);
+}
+
+.keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 3rem 0;
+    gap: 1.5rem;
+}
+
+.word {
+align-self: flex-end;
+}
+
+/* fixme: se descuadran los <p> al mostrar las letras */
+.letter_gap {
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+
+    display: inline-block;
+    margin-right: 1.5rem;
+    min-height: 7rem;
+    width: 4rem;
+    border-bottom: 1rem solid var(--black);
+}
+
+.letterStyle {
+    width: 1rem;
+    flex-basis: 8.5%;
+    border-radius: 7px;
+}
+
+/* USER SCORES SECTION */
+.user_scores {
+    width: 20%;
+
+    padding: 1.5rem 2.5rem;
+    background-color: var(--background);
+}
+
+/* LOSE PAGE */
+.lose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    min-height: 70vh;
+
+    gap: 2rem;
+    padding: 1.5rem 2.5rem;
+    background-color: var(--background);
+}
+
+/* WIN PAGE  */
+.win {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    min-height: 70vh;
+
+    gap: 2rem;
+    padding: 1.5rem 2.5rem;
+    background-color: var(--background);
+}
+
+.win img, .lose img {
+    width: 20%;
+    filter:drop-shadow(1.6rem 0.7rem 0.3rem var(--primary));
+}
+
+.hide {
+    display: none;
+}

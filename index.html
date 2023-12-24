@@ -3,51 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    
+    <link rel="icon" href="assets/favicon.png">
+
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="colors.css">
+    
+    <title>Pasapalabra</title>
 </head>
 <body>
-    <h1>Hangman</h1>
-    <div class="div-padre">
-        <div id="player-name">
-            <h2>Choose a username</h2>
-            <p>Username</p>
-            <input id="input-username" class="block username-class" type="text" required>
-            <input type="submit" class="block button-initial" id="start-game" value="Start">
-        </div>
-        <div class="hide play-game">
-          <div class="flex-container">
-            <div class="hangman">
-              <div class="gallows"></div>
-              <div class="horizontal-bar"></div>
-              <div class="vertical-bar"></div>
-              <div class="rope"></div>
-              <div class="head"></div>
-              <div class="body"></div>
-              <div class="left-arm"></div>
-              <div class="right-arm"></div>
-              <div class="left-leg"></div>
-              <div class="right-leg"></div>
+
+    <header>
+        <h1>PASAPALABRA</h1>
+    </header>
+    
+    <main class="main">
+
+        <div id="login" class="login">
+            <h2>Choose a user name</h2>
+
+            <div class="input_group">
+                <input class="input" type="text" id="name" required>
+                <small></small>
+                <label class="label" for="name">User name</label>
             </div>
-            <div class="word">
-              
+
+            <button id="btn-start" class="btn">START</button>
+        </div>
+
+        <div id="game" class="game hide">
+            <h2>Guess the word</h2>
+
+            <div class="dashboard">
+
+                <section id="hangman" class="hangman">
+                    <div class="base_bar"></div>
+                    <div class="vertical_bar hide"></div>
+                    <div class="horizontal_bar hide"></div>
+                    <div class="top_bar hide"></div>
+                    <div class="man_head hide"></div>
+                    <div class="man_body hide"></div>
+                    <div class="man_right_arm hide"></div>
+                    <div class="man_left_arm hide"></div>
+                    <div class="man_right_leg hide"></div>
+                    <div class="man_left_leg hide"></div>
+                </section>
+
+                <!-- fixme: se descuadran los <p> al mostrar las letras -->
+                <section id="word" class="word">
+                </section>
             </div>
-          </div>
 
-          <div class="letters-container">
+            <section id="keyboard" class="keyboard">
 
-          </div>
-        </div>
-
-        <!-- <div class="hide result">
-          <button id="play-again-btn" class="button-initial">Play again</button>
-        </div> -->
-
-        <div id="user-scores">
+            </section>
 
         </div>
-    </div>
-    <script type="module" src="domReferences.js"></script>
-    <script type="module" src="app.js"></script>
+
+        <section id="lose" class="lose hide">
+            <h2>YOU LOSE!</h2>
+            <img src="./assets/loser.png" alt="Lose icon">
+            <button id="restart--lose" class="btn">PLAY AGAIN</button>
+        </section>
+
+        <section id="win" class="win hide">
+            <h2>YOU WIN!</h2>
+            <img src="./assets/win.svg" alt="Win icon">
+            <button id="restart--win" class="btn">PLAY AGAIN</button>
+        </section>
+
+        <section class="user_scores">
+            <h2>User scores</h2>
+        </section>
+
+        <nav>
+
+            <input type="checkbox" class="menu--open">
+
+        </nav>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="elements.js"></script>
+
 </body>
 </html>

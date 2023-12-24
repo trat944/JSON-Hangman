@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hangman</h1>
+    <div class="div-padre">
+        <div id="player-name">
+            <h2>Choose a username</h2>
+            <p>Username</p>
+            <input id="input-username" class="block username-class" type="text" required>
+            <input type="submit" class="block button-initial" id="start-game" value="Start">
+        </div>
+        <div class="hide play-game">
+          <div class="flex-container">
+            <div class="hangman">
+              <div class="gallows"></div>
+              <div class="horizontal-bar"></div>
+              <div class="vertical-bar"></div>
+              <div class="rope"></div>
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="left-arm"></div>
+              <div class="right-arm"></div>
+              <div class="left-leg"></div>
+              <div class="right-leg"></div>
+            </div>
+            <div class="word">
+              
+            </div>
+          </div>
+
+          <div class="letters-container">
+
+          </div>
+        </div>
+
+        <!-- <div class="hide result">
+          <button id="play-again-btn" class="button-initial">Play again</button>
+        </div> -->
+
+        <div id="user-scores">
+
+        </div>
+    </div>
+    <script type="module" src="domReferences.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
